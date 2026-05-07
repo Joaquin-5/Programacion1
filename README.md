@@ -1,2 +1,2 @@
 # Programacion1
-Prácticas de la materia programación I - Tecnicatura Universitaria en Programación UTN
+Prácticas de la materia Programación I - Tecnicatura Universitaria en Programación UTN Regional Buenos Aires
