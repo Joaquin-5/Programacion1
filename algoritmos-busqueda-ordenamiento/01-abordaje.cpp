@@ -1,11 +1,12 @@
 #include <iostream>
 using namespace std;
 
-int busquedaLineal(const int asientos[8], int asientoPersona);
+int busquedaLineal(const int asientos[], int asientoPersona);
 
 int main()
 {
-    const int asientos[8] = {102, 205, 308, 401, 550, 612, 704, 999};
+    const cantAsientos = 8;
+    const int asientos[cantAsientos] = {102, 205, 308, 401, 550, 612, 704, 999};
     int asientoAbuscar = 0, indiceAsiento = 0;
 
     cout << "Ingrese su número de asiento" << endl;
@@ -25,7 +26,7 @@ int main()
     return 0;
 }
 
-int busquedaLineal(const int asientos[8], int asientoPersona)
+int busquedaLineal(const int asientos[], int asientoPersona)
 {
     for (int i = 0; i < 8; i++)
     {
