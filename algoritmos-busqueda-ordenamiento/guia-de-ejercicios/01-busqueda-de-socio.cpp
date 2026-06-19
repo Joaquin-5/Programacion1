@@ -2,9 +2,11 @@
 #include <windows.h>
 using namespace std;
 
-// Búsqueda binaria: este algoritmo requiere que el vector esté ordenado (ascendente o descendente) para poder descartar mitades en cada comparación. En este caso, el enunciado indica que los números de carnet fueron cargados según la fecha de inscripción, por lo que no tienen un orden numérico. Al no cumplirse esta precondición, la búsqueda binaria no puede aplicarse correctamente.
+/*
+    Búsqueda binaria: este algoritmo requiere que el vector esté ordenado (ascendente o descendente) para poder descartar mitades en cada comparación. En este caso, el enunciado indica que los números de carnet fueron cargados según la fecha de inscripción, por lo que no tienen un orden numérico. Al no cumplirse esta precondición, la búsqueda binaria no puede aplicarse correctamente.
 
-// PUP: para usar este método se necesita que exista una equivalencia directa entre la clave (el número de carnet) y la posición en el vector, que el rango de valores posibles sea conocido de antemano y que dicho rango esté completo (sin "huecos"). Los números de carnet del ejemplo (504, 12, 1022, 5, 430) no son consecutivos ni responden a un rango acotado y conocido, por lo que no es posible establecer esa equivalencia clave-posición.
+    PUP: para usar este método se necesita que exista una equivalencia directa entre la clave (el número de carnet) y la posición en el vector, que el rango de valores posibles sea conocido de antemano y que dicho rango esté completo (sin "huecos"). Los números de carnet del ejemplo (504, 12, 1022, 5, 430) no son consecutivos ni responden a un rango acotado y conocido, por lo que no es posible establecer esa equivalencia clave-posición.
+*/
 
 int esSocio(int numerosCarnet[], int cantidadSocios, int numeroSocio)
 { // Uso el algoritmo de búsqueda secuencial
@@ -41,4 +43,3 @@ int main()
 
     return 0;
 }
-
