@@ -1,0 +1,4 @@
+El TAD "CuentaBancaria"
+Enunciado: Diseña un TAD para gestionar los movimientos básicos de una cuenta de ahorros.
+Debe almacenar el número de cuenta (un número entero) y el saldo actual (un número decimal).
+Debe permitir: inicializar la cuenta con un número y un saldo inicial, depositar dinero, retirar dinero (solo si hay fondos suficientes) y consultar el saldo.
