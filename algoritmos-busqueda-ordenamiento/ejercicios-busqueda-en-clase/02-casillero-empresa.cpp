@@ -18,7 +18,7 @@ bool buscarCasillero(string arr[], int credencial, string &nombre)
     return true;
 }
 
-void mostrarResultado(string nombrePersona)
+void mostrarResultado(bool encontrado, string nombrePersona)
 {
     if (nombrePersona != "")
     {
@@ -38,8 +38,11 @@ int main()
     string personasCasilleros[CANTPERSONAS] = {"Juan Pérez", "María González", "Lucas Fernández", "Sofía Martínez", "Nicolás López", "Camila Rodríguez", "Martín Díaz", "Valentina Torres", "Agustín Romero", "Julieta Herrera"};
     string nombrePersona = "";
     int numCredencialABuscar = 0;
+    bool encontrado = false;
 
     pedirCredencial(numCredencialABuscar);
+
+    encontrado = buscarCasillero(personasCasilleros, numCredencialABuscar, nombrePersona);
 
     if (buscarCasillero(personasCasilleros, numCredencialABuscar, nombrePersona))
     {
