@@ -36,11 +36,11 @@ int busquedaCodigo(int arr[], int cant, int codigoABuscar)
     return -1;
 }
 
-void mostrarResultado(int codABuscar, int encontrado)
+void mostrarResultado(int codABuscar, int pos)
 {
-    if (encontrado != -1)
+    if (pos != -1)
     {
-        cout << "Se encontró el código " << codABuscar << ", en la posición: " << encontrado << endl;
+        cout << "Se encontró el código " << codABuscar << ", en la posición: " << pos << endl;
     }
     else
     {
@@ -55,13 +55,13 @@ int main()
     const int CANTCODIGOS = 10;
     int codigosProductos[CANTCODIGOS] = {1015, 2022, 3045, 4001, 5012, 6120, 7235, 8100, 9312, 9999};
     int codProductoABuscar = 0;
-    int encontrado = 0;
+    int pos = 0;
 
     pedirCodigoDeProducto(codProductoABuscar);
 
-    encontrado = busquedaCodigo(codigosProductos, CANTCODIGOS, codProductoABuscar);
+    pos = busquedaCodigo(codigosProductos, CANTCODIGOS, codProductoABuscar);
 
-    mostrarResultado(codProductoABuscar, encontrado);
+    mostrarResultado(codProductoABuscar, pos);
 
     return 0;
 }
