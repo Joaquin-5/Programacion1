@@ -24,29 +24,29 @@ void cargaDeDatos(int prod[][CANTARTICULOS], int fallas[][CANTARTICULOS], const 
     }
 }
 
-int totalArticulosFallados(int vec[][CANTARTICULOS])
+int totalArticulosFallados(int mat[][CANTARTICULOS])
 {
     int total = 0;
     for (int i = 0; i < TURNOSTRABAJO; i++)
     {
         for (int j = 0; j < CANTARTICULOS; j++)
         {
-            total += vec[i][j];
+            total += mat[i][j];
         }
     }
     return total;
 }
 
-int mayorCantidadSillas(int vec[][CANTARTICULOS])
+int mayorCantidadSillas(int mat[][CANTARTICULOS])
 {
-    int mayorCantidadSillas = vec[0][0];
+    int mayorCantidadSillas = mat[0][0];
     int turno = -1;
 
     for (int i = 1; i < TURNOSTRABAJO; i++)
     {
-        if (vec[i][0] > mayorCantidadSillas)
+        if (mat[i][0] > mayorCantidadSillas)
         {
-            mayorCantidadSillas = vec[i][0];
+            mayorCantidadSillas = mat[i][0];
             turno = i;
         }
     }
