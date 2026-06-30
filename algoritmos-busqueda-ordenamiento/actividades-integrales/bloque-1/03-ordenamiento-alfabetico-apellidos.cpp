@@ -72,6 +72,10 @@ void mostrarResultados(string vec[], int cant)
     // Listado de apellidos completo y ordenado
     cout << "Listado de apellidos completo y ordenado alfabéticamente" << endl;
     ordenarAlfabeticamente(vec, cant);
+    for (int i = 0; i < cant; i++)
+    {
+        cout << vec[i] << endl;
+    }
 
     // Consulta de apellido para saber si está en el listado
     string apellido = "";
