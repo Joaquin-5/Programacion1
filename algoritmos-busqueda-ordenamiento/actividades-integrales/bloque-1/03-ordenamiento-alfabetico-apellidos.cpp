@@ -95,6 +95,7 @@ int main()
 {
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
+    
     const int MAX = 100;
     int cantidadApellidos = 0;
     string apellidos[MAX];
