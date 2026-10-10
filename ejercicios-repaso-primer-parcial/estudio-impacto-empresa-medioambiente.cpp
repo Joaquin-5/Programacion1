@@ -49,7 +49,7 @@ void cargaDeDatos(float temperaturas[], float humedades[], int limite, int &i_te
     } while (dato != "F" && dato != "f");
 }
 
-float calcularPromedioHumedades(float humedades[], int cantHumedades, float promedio)
+float calcularPromedioHumedades(float humedades[], int cantHumedades)
 {
     if (cantHumedades == 0)
         return 0;
@@ -59,8 +59,7 @@ float calcularPromedioHumedades(float humedades[], int cantHumedades, float prom
     {
         sumaHumedades += humedades[i];
     }
-    promedio = sumaHumedades / cantHumedades;
-    return promedio;
+    return sumaHumedades / cantHumedades;
 }
 
 void mostrarDatos(float temperaturas[], int cantTemperaturas, float promedioHumedad)
