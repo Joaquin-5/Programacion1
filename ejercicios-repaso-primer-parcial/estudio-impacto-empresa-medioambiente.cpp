@@ -13,6 +13,8 @@ void cargaDeDatos(float temperaturas[], float humedades[], int limite, int &i_te
         cin >> cantDatos;
     } while (cantDatos > limite);
 
+    int totalCargados = 0;
+
     do
     {
         cout << "Ingrese T para temperatura y H para humedad o 'F' para finalizar: " << endl;
@@ -46,7 +48,7 @@ void cargaDeDatos(float temperaturas[], float humedades[], int limite, int &i_te
             cout << "[Error] Opcion no valida. Por favor, intente de nuevo." << endl;
             // No incrementamos ningún índice, simplemente el bucle se repite
         }
-    } while (dato != "F" && dato != "f");
+    } while (dato != "F" && dato != "f" && totalCargados < cantDatos);
 }
 
 float calcularPromedioHumedades(float humedades[], int cantHumedades)
@@ -64,6 +66,14 @@ float calcularPromedioHumedades(float humedades[], int cantHumedades)
 
 void mostrarDatos(float temperaturas[], int cantTemperaturas, float promedioHumedad)
 {
+    // Validar que existan temperaturas antes de buscar mayor/menor
+    if (cantTemperaturas == 0)
+    {
+        cout << "No se registraron temperaturas." << endl;
+        cout << "El promedio de las humedades es: " << promedioHumedad << endl;
+        return;
+    }
+
     float tempMenor = temperaturas[0], tempMayor = temperaturas[0];
 
     for (int i = 1; i < cantTemperaturas; i++)
@@ -79,7 +89,8 @@ void mostrarDatos(float temperaturas[], int cantTemperaturas, float promedioHume
         }
     }
 
-    cout << "La temperatura menor es: " << tempMenor << ". La temperatura mayor es: " << tempMayor << ". El promedio de las humedades es: " << promedioHumedad;
+    cout << "La temperatura menor es: " << tempMenor << ". La temperatura mayor es: " << tempMayor << "." << endl;
+    cout << "El promedio de las humedades es: " << promedioHumedad << endl;
 }
 
 int main()
@@ -89,7 +100,7 @@ int main()
     int i_temp = 0, i_hum = 0;
 
     cargaDeDatos(temperaturas, humedades, TAMANIO, i_temp, i_hum);
-    promedioHumedades = calcularPromedioHumedades(humedades, i_hum, promedioHumedades);
+    promedioHumedades = calcularPromedioHumedades(humedades, i_hum);
     mostrarDatos(temperaturas, i_temp, promedioHumedades);
 
     return 0;
